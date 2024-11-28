@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev"
+  },
+  "dependencies": {
+    "hono": "^4.6.12",
+    "@turborepo-intro/math": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "wrangler": "^3.91.0"
+  }
+}

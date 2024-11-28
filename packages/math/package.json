@@ -1,5 +1,20 @@
 {
+  "name": "@turborepo-intro/math",
+  "main": "./dist/math.js",
+  "types": "./dist/math.d.ts",
   "exports": {
-    "./add": "./add.ts"
+    ".": {
+      "import": "./dist/math.js",
+      "types": "./dist/math.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@turborepo-intro/typescript-config": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
   }
 }

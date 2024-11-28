@@ -1,0 +1,7 @@
+{
+  "name": "@turborepo-intro/typescript-config",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}
