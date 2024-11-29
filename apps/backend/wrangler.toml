@@ -1,0 +1,6 @@
+name = "feed-hub-backend"
+main = "src/index.ts"
+compatibility_date = "2024-11-20"
+
+[[vars]]
+BEARER_KEY = "tlgvv1dvfdkl8hrh9wvyp3md4wjqtfek"

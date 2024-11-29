@@ -24,16 +24,18 @@ importers:
       '@cloudflare/workers-types':
         specifier: ^4.20241127.0
         version: 4.20241127.0
+      '@turborepo-intro/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       wrangler:
         specifier: ^3.91.0
         version: 3.91.0(@cloudflare/workers-types@4.20241127.0)
 
   packages/math:
-    dependencies:
+    devDependencies:
       '@turborepo-intro/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-    devDependencies:
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
