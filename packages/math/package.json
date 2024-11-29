@@ -11,10 +11,8 @@
   "scripts": {
     "build": "tsc"
   },
-  "dependencies": {
-    "@turborepo-intro/typescript-config": "workspace:*"
-  },
   "devDependencies": {
+    "@turborepo-intro/typescript-config": "workspace:*",
     "typescript": "^5.7.2"
   }
 }
