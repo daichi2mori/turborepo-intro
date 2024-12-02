@@ -7,7 +7,7 @@
     "removeComments": true,
     "incremental": false,
     "isolatedModules": true,
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",

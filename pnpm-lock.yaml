@@ -14,9 +14,15 @@ importers:
 
   apps/backend:
     dependencies:
+      '@hono/trpc-server':
+        specifier: ^0.3.3
+        version: 0.3.3(@trpc/server@10.45.2)(hono@4.6.12)
       '@turborepo-intro/math':
         specifier: workspace:*
         version: link:../../packages/math
+      '@turborepo-intro/trpc':
+        specifier: workspace:*
+        version: link:../../packages/trpc
       hono:
         specifier: ^4.6.12
         version: 4.6.12
@@ -97,6 +103,15 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
+
+  packages/trpc:
+    dependencies:
+      '@trpc/server':
+        specifier: ^10.45.2
+        version: 10.45.2
+      valibot:
+        specifier: 1.0.0-beta.9
+        version: 1.0.0-beta.9(typescript@5.7.2)
 
   packages/typescript-config: {}
 
@@ -441,6 +456,13 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+  '@hono/trpc-server@0.3.3':
+    resolution: {integrity: sha512-LGxAB3hlNSxF4lAedZyzHMRmL958bZxvMSu/z0i1rLSZ0i8qKOYlVnboa7bKFoksEC+DODFpLHadpzUHs+Bl6A==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@trpc/server': ^10.10.0 || >11.0.0-rc
+      hono: '>=4.*'
+
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
@@ -664,6 +686,9 @@ packages:
 
   '@swc/types@0.1.17':
     resolution: {integrity: sha512-V5gRru+aD8YVyCOMAjMpWR1Ui577DD5KSJsHP8RAxopAH22jFz6GZd/qxqjO6MJHQhcsjvjOFXyDhyLQUnMveQ==}
+
+  '@trpc/server@10.45.2':
+    resolution: {integrity: sha512-wOrSThNNE4HUnuhJG6PfDRp4L2009KDVxsd+2VYH8ro6o/7/jwYZ8Uu5j+VaW+mOmc8EHerHzGcdbGNQSAUPgg==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -1339,6 +1364,14 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  valibot@1.0.0-beta.9:
+    resolution: {integrity: sha512-yEX8gMAZ2R1yI2uwOO4NCtVnJQx36zn3vD0omzzj9FhcoblvPukENIiRZXKZwCnqSeV80bMm8wNiGhQ0S8fiww==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   vite@6.0.1:
     resolution: {integrity: sha512-Ldn6gorLGr4mCdFnmeAOLweJxZ34HjKnDm4HGo6P66IEqTxQb36VEdFJQENKxWjupNfoIjvRUnswjn1hpYEpjQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -1617,6 +1650,11 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
+  '@hono/trpc-server@0.3.3(@trpc/server@10.45.2)(hono@4.6.12)':
+    dependencies:
+      '@trpc/server': 10.45.2
+      hono: 4.6.12
+
   '@isaacs/cliui@8.0.2':
     dependencies:
       string-width: 5.1.2
@@ -1781,6 +1819,8 @@ snapshots:
   '@swc/types@0.1.17':
     dependencies:
       '@swc/counter': 0.1.3
+
+  '@trpc/server@10.45.2': {}
 
   '@types/estree@1.0.6': {}
 
@@ -2473,6 +2513,10 @@ snapshots:
       picocolors: 1.1.1
 
   util-deprecate@1.0.2: {}
+
+  valibot@1.0.0-beta.9(typescript@5.7.2):
+    optionalDependencies:
+      typescript: 5.7.2
 
   vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1):
     dependencies:

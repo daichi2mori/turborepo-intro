@@ -5,12 +5,14 @@
     "dev": "wrangler dev"
   },
   "dependencies": {
-    "hono": "^4.6.12",
-    "@turborepo-intro/math": "workspace:*"
+    "@hono/trpc-server": "^0.3.3",
+    "@turborepo-intro/math": "workspace:*",
+    "@turborepo-intro/trpc": "workspace:*",
+    "hono": "^4.6.12"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241127.0",
-    "wrangler": "^3.91.0",
-    "@turborepo-intro/typescript-config": "workspace:*"
+    "@turborepo-intro/typescript-config": "workspace:*",
+    "wrangler": "^3.91.0"
   }
 }

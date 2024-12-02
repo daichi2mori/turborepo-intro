@@ -1,7 +1,11 @@
 import { Hono } from "hono";
 import { add } from "@turborepo-intro/math";
+import { trpcServer } from "@hono/trpc-server";
+import { appRouter } from "../../../packages/trpc";
 
 const app = new Hono();
+
+app.use("/trpc/*", trpcServer({ router: appRouter }));
 
 app.get("/", (c) => {
   return c.text("Hello Hono");
